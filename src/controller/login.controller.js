@@ -14,8 +14,12 @@ class LoginController {
       // 3.返回用户信息
       ctx.body = { code: 0, data: { token, id, name } };
     } catch (error) {
-      console.log(error);
+      console.log(err);
     }
+  }
+
+  test(ctx, next) {
+    ctx.body = `验证身份通过~`;
   }
 }
 
