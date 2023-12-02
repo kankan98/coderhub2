@@ -20,7 +20,6 @@ class UserController {
     const { userId } = ctx.params;
     // 2.获取userId对应的头像信息
     const avatarInfo = await fileService.queryAvatarWithUserId(userId);
-    console.log(avatarInfo);
     // 3.读取头像所在的文件
     const { filename, mimetype } = avatarInfo;
     ctx.type = mimetype;

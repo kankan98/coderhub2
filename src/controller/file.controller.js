@@ -3,7 +3,6 @@ const userService = require("../service/user.service");
 const { SERVER_HOST, SERVER_PORT } = require("../config/server");
 class FileController {
   async create(ctx, next) {
-    console.log(ctx.request.file);
     const { filename, mimetype, size } = ctx.request.file;
     const { id } = ctx.user;
 

@@ -11,3 +11,4 @@ openssl
 > genrsa -out private.key 2048 // 生成私钥
 > rsa -in private.key -pubout -out public.key // 通过私钥生成公钥
 ```
+## jsonwebtoken源码136行注释，否则不能生成1024大小的密钥
